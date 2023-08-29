@@ -332,3 +332,69 @@ this would generate object file `custom1to9.o`.
 `spike pk custom1to9.o`
 
 ![image](https://github.com/Shrachinag/pes_asic_class/assets/119600435/ea24d1ad-91e9-4611-a717-5813b8670848)
+
+
+# Day-3
+## Introduction to Open-Source Simulator iVerilog
+<details>
+<summary> Introduction to iVerilog Design Testbench </summary>
+
+ - **Simulator**
+   - It is a tool used for simulating the design. It looks for the changes on the input signals to evaluate the outputs.
+   - If there is no change in the inputs, the simulator doesn't evaluate the outputs.
+   - RTL is checked for adherence to the spec by simulating the design.
+   - The tool used here is **iverilog** .
+
+- **iVerilog**
+  -  It is an open-source Verilog simulator used for testing and simulating digital circuit designs described in the Verilog hardware description language (HDL).
+  -  Both the design and the testbench are fed to the simulator and it produces a vcd (value change dump) file.
+  -  In order to view the vcd file, we use the GTKwave where we can see the wave forms.
+    
+  ![image](https://github.com/Shrachinag/pes_asic_class/assets/119600435/0632e281-deb8-4e50-bb94-cb641b6f394e)
+
+- **Design**
+  - It is the actual verilog code or set of verilog codes which ahs the intended functionality to meet with the required specifications.
+  - Verilog is used to describe the behavior and structure of digital circuits at different levels of abstraction, from high-level system descriptions down to low-level gate-level representations. 
+
+- **Testbench**
+  - A testbench is a specialized Verilog module or program used to verify the functionality and behavior of another Verilog module, circuit, or design. Testbenches are essential for testing and simulating digital designs before they are synthesized or manufactured as physical chips.
+  - It is a setup to apply stimulus to the design to check its functionality.
+![image](https://github.com/Shrachinag/pes_asic_class/assets/119600435/b3dc0af7-4f24-4178-b944-5d57477d9854)
+
+
+</details>
+
+## Labs using iVerilog and GTKwave
+<summary> Introduction to Lab </summary>
+
++ Make a directory named vlsi `mkdir vlsi`.
++ `cd vlsi`.
++ `git clone https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop.git`
++ Creates a folder called `sky130RTLDesignAndSynthesisWorkshop` in the `vlsi` directory.
+
+  - my_lib : contains all the library files
+
+  - lib : contains sky130 standard cell library used for our synthesis
+
+  - verilog_model : contains all the standard cell verilog modules of the standard cells contained in the .lib
+
+  - verilog_files : contains all the verilog source files and testbench files which are required for labs
+
+</details>
+
+<details>
+<summary> iVerilog GTKwave Part-1 </summary>	
+
+
++ `cd vlsi/sky130RTLDesignAndSynthesisWorkshop/verilog_files`
+
++ we have loaded the source code along with the testbench code into the iverilog simulator
+
++ `iverilog good_mux.v tb_good_mux.v`
+
+
+
+
+
+
+
